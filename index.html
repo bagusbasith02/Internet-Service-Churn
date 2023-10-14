@@ -1,0 +1,258 @@
+<!DOCTYPE HTML>
+<!--
+	Strata by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>United States Fast Food Restaurant Market Analysis</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+	</head>
+	<body class="is-preload">
+
+		<!-- Header -->
+			<header id="header">
+				<div class="inner">
+					
+				</div>
+				<div class="inner">
+					
+				</div>
+			</header>
+
+		<!-- Main -->
+			<div id="main">
+
+				<!-- One -->
+					<section id="one">
+						<header class="major">
+							<h2>Project Summary</h2>
+						</header>
+						<p>This project is about to identify and solving customer churn rate that happening in O-NET Company. The dataset originally came from kaggle. In this project I were able to do : </p>
+						<ul>
+						<li>Cleaned raw data using various method and make sure the data is feasible to analyze.</li>
+						<li>Conducted exploratory data analysis (EDA) to find out what causes customer churn.</li>
+						<li>Analyzed Customer Churn by their factor such as: Subscriber Package, Age Subscription and Service Failure.</li>
+						</ul>
+
+						<h2>Insights</h2>
+						<ol>
+							<li>The Internet-only package has the
+								highest customer churn rate based
+								on Customer Package Category.</li>
+							<li>Customers in the subscription age
+								of 0-1 year constitute the group with
+								the highest number of customer
+								churns.</li>
+							<li>Surprisingly, Service Failure does
+								not influence customer churn, as the
+								majority of customer churns come
+								from non-problematic service
+								failures.</li>
+					  	</ol>
+
+						<p><h2>Project Files</h2></p>
+						For a more comprehensive analysis and visualization, please open the project files.
+						<ul>
+						<li><a href="https://colab.research.google.com/drive/1sx8K4WDWK6wm6jm363TQ6lWH1W2eG2tY?usp=sharing" target="_blank">Project Notebook</a></li>
+						<li><a href="https://public.tableau.com/views/May23_Seoul_Team5_GroupOFP_16928041776670/Dashboard1?:language=en-GB&publish=yes&:display_count=n&:origin=viz_share_link" target="_blank"> Tableau Dashboard</a></li>
+					</ul>
+					</section>
+
+				<!-- Two -->
+					<section id="two">
+						<h2>Project Background</h2>
+						<div class="row gtr-50 gtr-uniform">
+							<div class="col-4"><span class="image fit"><img src="images/fast_food.jpg"></span></div>
+						</div><br>
+						<p>Our client wishes to know the growing Fast Food Market. They are on lookout to support Brands which are currently struggling by investing in digital capabilities. We wish to provide them with an assessment of current landscape and learn top brands in marketplace. Apart from this we will also seek to know which brands are falling short of health code inspections and their ratings on Yelp.</p> 
+					</section>
+				
+				<!-- Three -->
+				<section id="three">
+					<h2>Data Scope, Goals & Objectives</h2>
+					<h3>1. Fast Food Restaurant America</h3>
+						<p>This dataset is a list of over 10,000 fast food restaurants provided by Datafiniti's Business Database. The dataset includes the restaurant's address, city, latitude and longitude coordinates, name, and more.</p>
+					<h3>2. LA Restaurant & Market Health Data</h3>
+						<p>This is a dataset hosted by the city of Los Angeles.</p>
+					<h3>3. Chicago Food Inspections</h3>
+						<p>This dataset is derived from inspections of restaurants and other food establishments in Chicago.</p>
+					<h3>4. Yelp Dataset</h3>
+						<p>This dataset is a subset of Yelp's businesses, reviews, and user data. It was originally put together for the Yelp Dataset Challenge which is a chance for students to conduct research or analysis on Yelp's data and share their discoveries. In the dataset you'll find information about businesses across 11 metropolitan areas in four countries.</p>
+					<h3>Goals</h3>
+					<p>Our goal is to assess fast food market in United States, and provide analysis based on market landscape, fast food brand violation of health code inspections and their rating on Yelp.</p>
+					<h3>Objectives</h3>
+					<ol>
+						<li>Clean raw data using various method and make sure the data is feasible to analyze.</li>
+						<li>Conduct exploratory data analysis (EDA) to find out the overview fast food restaurant landscape in United States.</li>
+						<li>Analyze fast food brand presence across United States.</li>
+						<li>Analyze inspection of health violation data by fast food brands.</li>
+						<li>Review fast food brand sentiment on yelp data.</li>
+					</ol>
+				</section>
+	
+				<!-- Five -->
+				<section id="five">
+					<h2>Data Cleaning</h2>
+					
+					<ol>
+						<li>We cleaned few features containing white spaces that should be removed.</b></li>
+						<li>We removed agent and company features due to large missing data and large categorical characteristics.</li>
+						<li>We were able to engineer a new feature such as total day stays and total guests to simplify the analysis.</li>
+						<li>We combined arrival date data such as date, month, year to a datetime format.</li>
+					  </ol>
+				</section>
+
+				<!-- Six -->
+				<section id="six">
+					<h2>Data Analysis</h2>
+					<h3><b>Overview of Fast Food Restaurant Landscape</h3></b>
+					<div class="row gtr-50 gtr-uniform">
+						<div class="col-9"><span class="image fit"><img src="images/analysis1.png"></span></div>
+					</div><br>
+					<b>Interpretation:</b>
+					<ol>
+						<li>In West, California makes up 36% of total restaurants , Washington and Arizona are behind.</li>
+						<li>Texas, Florida are top two markets in South while Pennsylvania, New York lead in North East.</li>
+						<li>In Mid West, Ohio has highest among all with about 20%.</li>
+				  	</ol><br>
+					
+					<div class="row gtr-50 gtr-uniform">
+						<div class="col-9"><span class="image fit"><img src="images/analysis2.png"></span></div>
+					</div><br>
+					<b>Interpretation:</b>
+					<ol>
+						<li>Ohio(391), California(350), Texas(347), Florida(309), Indiana(293) are top 5 markets in US.</li>
+						<li>Montana, Rikers Island, Alaska, Colorado Springs rank least.</li>
+				  	</ol><br>
+					
+					<div class="row gtr-50 gtr-uniform">
+						<div class="col-4"><span class="image fit"><img src="images/analysis3.png"></span></div>
+					</div><br>
+					<p><b>Interpretation:</b> With 41.83% of fast food restaurants located South takes the top spot while North East contains only 12.83%. For Brands looking to enter the market or expand their footprint, South and Mid West are favourable.</p>
+				
+					<h3><b>Analyze Brand Presence by Geographies</h3></b>
+
+					<div class="row gtr-50 gtr-uniform">
+						<div class="col-9"><span class="image fit"><img src="images/analysis4.png"></span></div>
+					</div><br>
+					<p><b>Interpretation:</b> McDonalds, Burger King, Taco Bell, Wendys, Arbys, KFC and Subway are the most popular Brands. Clearly all the Brands have big presence in South followed by Mid West. There are a few exceptions when compared to overall level. Burger King has more stores in North East than West which tells us that it is priority market for them.</p>
+				
+					<div class="row gtr-50 gtr-uniform">
+						<div class="col-7"><span class="image fit"><img src="images/analysis5.png"></span></div>
+					</div><br>
+					<b>Interpretation:</b>
+					<ol>
+						<li>McDonalds market penetration is above 30% in all regions with highest of 36% in North East.</li>
+						<li>Burger King has higher penetration in North East after McDonalds. Subway is concentrated more in West while Arbys dominates in MidWest.</li>
+						<li>Taco Bell has least presence in North East.</li>
+					</ol><br>
+				
+					<div class="row gtr-50 gtr-uniform">
+						<div class="col-9"><span class="image fit"><img src="images/analysis6.png"></span></div>
+					</div><br>
+					<b>Interpretation:</b>
+					<ol>
+						<li>Analyzing by state we learn the top markets for each brand. We observe that they are present in most of the markets.</li>
+						<li>For McDonalds, Vermont, Texas, Connecticut are key ones. Wendys is present in all states except Delaware and Colorado Springs Arbys is absent in DC, Mississipi, Rikers Island and Vermont, while KFC lacks any stores in Montana.</li>
+					</ol><br>
+
+					<h3><b>Inspect Health Violations Data by Brand</h3></b>
+					<p>We have so far gathered a clear understanding of Fast Foods Restaurants presence across US and as well as learned the geographic footprint of top brands. To aid our understanding of knowing which brands are facing difficulties in running their business so that our PE firm can step in and support, we are going to find out if any health code standards are being broken.</p>
+					<p>Let us examine Los Angeles and Chicago for this purpose. Both are some of the largest cities in United States.</p>
+
+					<h4><b>Los Angeles City, CA</h4></b>
+
+					<div class="row gtr-50 gtr-uniform">
+						<div class="col-9"><span class="image fit"><img src="images/analysis7.png"></span></div>
+					</div><br>
+					<p><b>Interpretation:</b> Common Violations appear to be related to Floors, Walls or Non Food contact surfaces lacking cleanliness. Plumbing, Ventilation, Storage of foods/containers are also among the top ones which are frequently cited for violations.</p>
+				
+					<div class="row gtr-50 gtr-uniform">
+						<div class="col-7"><span class="image fit"><img src="images/analysis8.png"></span></div>
+					</div><br>
+					<b>Interpretation:</b>
+					<ol>
+						<li>Subway, McDonalds lead in terms of total violations. This can be explained in part due to higher store counts.</li>
+						<li>At Violations per store, KFC records 53 while McDonalds, Subway and others are far lower at 24, 21 respectively.</li>
+						<li>TacoBell and BurgerKing have lowest violations.</li>
+					</ol>
+					<p>If a brand has more stores than their competitors then it is likely to have more violations registered. Henceforth we also would like to know number of stores for which the inspections were carried out by City. In Los Angeles City, it appears that KFC is very bad situation. Burger King and TacoBell despite having higher stores than Wendys and Arbys register fewer violations.</p>
+				
+					<h4><b>Chicago, IL</h4></b>
+					<div class="row gtr-50 gtr-uniform">
+						<div class="col-9"><span class="image fit"><img src="images/analysis9.png"></span></div>
+					</div><br>
+					<p><b>Interpretation:</b> Rodents, Insects presence is the main code which is often cited. Protection of food, Sanitizing, Dish/Hand washing are among the top10.</p>
+				
+					<div class="row gtr-50 gtr-uniform">
+						<div class="col-7"><span class="image fit"><img src="images/analysis10.png"></span></div>
+					</div><br>
+					<p><b>Interpretation:</b> Subway, McDonalds once again fall short of required health standards. Total Violations are high due to presence of many stores. McDonalds, Burger King, KFC lead the fray in failing inspections.</p>
+				
+					<h4><b>Summary of Health Violation Data</h4></b>
+				
+					<ol>
+						<li>For both Chicago and Los Angeles cities, KFC and McDonalds are among the top 3 brands facing challenges in running their operations. They may already be incurring stiff penalities and repeated offences may cause them to lose their licenses.</li>
+						<li>McDonalds due to their larger presence in market, could have their troubles tied to other factors.</li>
+						<li>KFC despite having much fewer stores is unable to meet necessary guidelines and may be in real trouble.</li>
+					</ol>
+				
+					<h3><b>Review Sentiment of Brands on Yelp</h3></b>
+					<div class="row gtr-50 gtr-uniform">
+						<div class="col-9"><span class="image fit"><img src="images/analysis11.png"></span></div>
+					</div><br>
+					<p><b>Interpretation:</b> Going by shape of distributions, Brands like McDonalds, KFC and Wendys skew lower ratings than others. To have a better understanding lets look at proportion of ratings at Brand level.</p>
+
+					<div class="row gtr-50 gtr-uniform">
+						<div class="col-9"><span class="image fit"><img src="images/analysis12.png"></span></div>
+					</div><br>
+					<b>Interpretation:</b>
+						<ol>
+							<li>If we consider a rating of 3 (Orange) as Neutral and use it as benchmark to measure amount of positive and negative ratings, we realize that Burger King, KFC and McDonalds contain high amount of less favourable reviews.</li>
+							<li>Arbys is rated much better than all other brands.</li>
+						</ol>
+
+				</section>
+				
+				<!-- Seven -->
+				<section id="seven">
+					<h2>Recommendation</h2>
+					<ol>
+						<li>We recommend that if we want to perentrate in fast food market, <b>region of choice </b> could be a requirement to make considerable market and revenue. Assumed that one region could have a leverage than others like lower tax, alx legal requirements, etc.</li>
+						<li>Because there is stiff competition in the market, <b>consider innovate/differentiate lead products to leverage position compared to other competitors.</b>.</li>
+						<li>Number of violation and rating number highly correlates with number of stores that one brand have (i.e. McDonalds, BK), <b>it is best to expand the market in controlled and timely manner</b> to maintain customer sentiment towards brand.</li>
+					  </ol>
+				</section>
+
+				<!-- Eight -->
+				<section id="eight">
+					<h2>Dashboard</h2>
+					<div class='tableauPlaceholder' id='viz1651248016355' style='position: relative'><noscript><a href='#'><img alt='Dashboard 1 ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Re&#47;RestaurantinAmerica&#47;Dashboard1&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='RestaurantinAmerica&#47;Dashboard1' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Re&#47;RestaurantinAmerica&#47;Dashboard1&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='language' value='en-US' /><param name='filter' value='publish=yes' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1651248016355');                    var vizElement = divElement.getElementsByTagName('object')[0];                    if ( divElement.offsetWidth > 800 ) { vizElement.style.width='1920px';vizElement.style.height='1107px';} else if ( divElement.offsetWidth > 500 ) { vizElement.style.width='1920px';vizElement.style.height='1107px';} else { vizElement.style.width='100%';vizElement.style.height='4427px';}                     var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
+				</section>
+			
+				<a href="https://adytiapp.github.io/adytia_uwak_portfolio/" class="button small">Home</a>
+				<a href="https://adytiapp.github.io/adytia_uwak_portfolio/projects.html" class="button small">Projects</a>
+			
+			</div>
+
+		<!-- Footer -->
+			<footer id="footer">
+				<div class="inner">
+				
+				</div>
+			</footer>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.poptrox.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
