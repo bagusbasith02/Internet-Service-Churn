@@ -6,7 +6,7 @@
 -->
 <html>
 	<head>
-		<title>United States Fast Food Restaurant Market Analysis</title>
+		<title>Internet Service Churn Analysis</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
@@ -66,31 +66,22 @@
 					<section id="two">
 						<h2>Project Background</h2>
 						<div class="row gtr-50 gtr-uniform">
-							<div class="col-4"><span class="image fit"><img src="images/fast_food.jpg"></span></div>
+							<div class="col-4"><span class="image fit"><img src="images/Internet Photo Background.jpeg"></span></div>
 						</div><br>
-						<p>Our client wishes to know the growing Fast Food Market. They are on lookout to support Brands which are currently struggling by investing in digital capabilities. We wish to provide them with an assessment of current landscape and learn top brands in marketplace. Apart from this we will also seek to know which brands are falling short of health code inspections and their ratings on Yelp.</p> 
+						<p>O-Net Group is a leading internet service provider company. The CEO has assigned the Head of Data Analysis to conduct an in depth analysis to identify the customer churn rate and formulate strategies to mitigate this high churn rate.</p> 
 					</section>
 				
 				<!-- Three -->
 				<section id="three">
-					<h2>Data Scope, Goals & Objectives</h2>
-					<h3>1. Fast Food Restaurant America</h3>
-						<p>This dataset is a list of over 10,000 fast food restaurants provided by Datafiniti's Business Database. The dataset includes the restaurant's address, city, latitude and longitude coordinates, name, and more.</p>
-					<h3>2. LA Restaurant & Market Health Data</h3>
-						<p>This is a dataset hosted by the city of Los Angeles.</p>
-					<h3>3. Chicago Food Inspections</h3>
-						<p>This dataset is derived from inspections of restaurants and other food establishments in Chicago.</p>
-					<h3>4. Yelp Dataset</h3>
-						<p>This dataset is a subset of Yelp's businesses, reviews, and user data. It was originally put together for the Yelp Dataset Challenge which is a chance for students to conduct research or analysis on Yelp's data and share their discoveries. In the dataset you'll find information about businesses across 11 metropolitan areas in four countries.</p>
-					<h3>Goals</h3>
-					<p>Our goal is to assess fast food market in United States, and provide analysis based on market landscape, fast food brand violation of health code inspections and their rating on Yelp.</p>
-					<h3>Objectives</h3>
+					<h2>Data Scope & Objectives</h2>
+					<h3>1. Data Scope</h3>
+						<p>This dataset is a list of over 62.000 user customer that using O-Net internet service. The dataset includes the customer movie subs & TV subs, Remaining contract, Customer age subscription, Customer churn, Service Failure, Customer Bill Average.</p>
+					<h3>2. Objectives</h3>
 					<ol>
-						<li>Clean raw data using various method and make sure the data is feasible to analyze.</li>
-						<li>Conduct exploratory data analysis (EDA) to find out the overview fast food restaurant landscape in United States.</li>
-						<li>Analyze fast food brand presence across United States.</li>
-						<li>Analyze inspection of health violation data by fast food brands.</li>
-						<li>Review fast food brand sentiment on yelp data.</li>
+						<li>To investigate the factors influencing customer churn</li>
+						<li>Establish correlations</li>
+						<li>Predict customer churn using logistic regression modeling</li>
+						<li>Provide actionable recommendations that can be utilized to shape our future strategies</li>
 					</ol>
 				</section>
 	
@@ -99,144 +90,68 @@
 					<h2>Data Cleaning</h2>
 					
 					<ol>
-						<li>We cleaned few features containing white spaces that should be removed.</b></li>
-						<li>We removed agent and company features due to large missing data and large categorical characteristics.</li>
-						<li>We were able to engineer a new feature such as total day stays and total guests to simplify the analysis.</li>
-						<li>We combined arrival date data such as date, month, year to a datetime format.</li>
+						<li>We removing irrelevant variables that we don't use in analysis.</b></li>
+						<li>We removing duplicates data.</li>
+						<li>We handle missing value by impute value (0) in it.</li>
+						<li>We identifying outliers by using interquartile methods and then removing the outliers.</li>
 					  </ol>
 				</section>
 
 				<!-- Six -->
 				<section id="six">
-					<h2>Data Analysis</h2>
-					<h3><b>Overview of Fast Food Restaurant Landscape</h3></b>
+					<h2>EDA</h2>
+					<h3><b>Churn Rate & Subscriber</h3></b>
 					<div class="row gtr-50 gtr-uniform">
-						<div class="col-9"><span class="image fit"><img src="images/analysis1.png"></span></div>
+						<div class="col-9"><span class="image fit"><img src="images/Churn Status.png"></span></div>
 					</div><br>
 					<b>Interpretation:</b>
 					<ol>
-						<li>In West, California makes up 36% of total restaurants , Washington and Arizona are behind.</li>
-						<li>Texas, Florida are top two markets in South while Pennsylvania, New York lead in North East.</li>
-						<li>In Mid West, Ohio has highest among all with about 20%.</li>
+						<li>There are more than half, which is 36,523 customers (58.4%), who have churned.</li>
 				  	</ol><br>
 					
 					<div class="row gtr-50 gtr-uniform">
-						<div class="col-9"><span class="image fit"><img src="images/analysis2.png"></span></div>
+						<div class="col-9"><span class="image fit"><img src="images/Subscriber.png"></span></div>
 					</div><br>
 					<b>Interpretation:</b>
 					<ol>
-						<li>Ohio(391), California(350), Texas(347), Florida(309), Indiana(293) are top 5 markets in US.</li>
-						<li>Montana, Rikers Island, Alaska, Colorado Springs rank least.</li>
+						<li>The highest percentage of churn is among customers with the "internet-only" package, at 92.2%.</li>
+						<li>On the other hand, the "Full Package" customers represent the package with the lowest churn percentage at 36.6%</li>
 				  	</ol><br>
 					
-					<div class="row gtr-50 gtr-uniform">
-						<div class="col-4"><span class="image fit"><img src="images/analysis3.png"></span></div>
-					</div><br>
-					<p><b>Interpretation:</b> With 41.83% of fast food restaurants located South takes the top spot while North East contains only 12.83%. For Brands looking to enter the market or expand their footprint, South and Mid West are favourable.</p>
-				
-					<h3><b>Analyze Brand Presence by Geographies</h3></b>
+					<h3><b>Customer Subscription Age</h3></b>
 
 					<div class="row gtr-50 gtr-uniform">
-						<div class="col-9"><span class="image fit"><img src="images/analysis4.png"></span></div>
+						<div class="col-9"><span class="image fit"><img src="images/Subscription Age .png"></span></div>
 					</div><br>
-					<p><b>Interpretation:</b> McDonalds, Burger King, Taco Bell, Wendys, Arbys, KFC and Subway are the most popular Brands. Clearly all the Brands have big presence in South followed by Mid West. There are a few exceptions when compared to overall level. Burger King has more stores in North East than West which tells us that it is priority market for them.</p>
+					<p><b>Interpretation:</b> Customers in the subscription age group of 0-1 year representing approximately 54.8% of the total overall customer churn..</p>
 				
+					<h3><b>Service Failure</h3></b>
+
 					<div class="row gtr-50 gtr-uniform">
-						<div class="col-7"><span class="image fit"><img src="images/analysis5.png"></span></div>
+						<div class="col-9"><span class="image fit"><img src="images/Service Failure.png"></span></div>
 					</div><br>
 					<b>Interpretation:</b>
 					<ol>
-						<li>McDonalds market penetration is above 30% in all regions with highest of 36% in North East.</li>
-						<li>Burger King has higher penetration in North East after McDonalds. Subway is concentrated more in West while Arbys dominates in MidWest.</li>
-						<li>Taco Bell has least presence in North East.</li>
-					</ol><br>
-				
-					<div class="row gtr-50 gtr-uniform">
-						<div class="col-9"><span class="image fit"><img src="images/analysis6.png"></span></div>
-					</div><br>
-					<b>Interpretation:</b>
-					<ol>
-						<li>Analyzing by state we learn the top markets for each brand. We observe that they are present in most of the markets.</li>
-						<li>For McDonalds, Vermont, Texas, Connecticut are key ones. Wendys is present in all states except Delaware and Colorado Springs Arbys is absent in DC, Mississipi, Rikers Island and Vermont, while KFC lacks any stores in Montana.</li>
+						<li>The number of Customer Churn instances is significantly higher among customers without issues, totaling 84.5%,</li>
+						
 					</ol><br>
 
-					<h3><b>Inspect Health Violations Data by Brand</h3></b>
-					<p>We have so far gathered a clear understanding of Fast Foods Restaurants presence across US and as well as learned the geographic footprint of top brands. To aid our understanding of knowing which brands are facing difficulties in running their business so that our PE firm can step in and support, we are going to find out if any health code standards are being broken.</p>
-					<p>Let us examine Los Angeles and Chicago for this purpose. Both are some of the largest cities in United States.</p>
-
-					<h4><b>Los Angeles City, CA</h4></b>
-
-					<div class="row gtr-50 gtr-uniform">
-						<div class="col-9"><span class="image fit"><img src="images/analysis7.png"></span></div>
-					</div><br>
-					<p><b>Interpretation:</b> Common Violations appear to be related to Floors, Walls or Non Food contact surfaces lacking cleanliness. Plumbing, Ventilation, Storage of foods/containers are also among the top ones which are frequently cited for violations.</p>
-				
-					<div class="row gtr-50 gtr-uniform">
-						<div class="col-7"><span class="image fit"><img src="images/analysis8.png"></span></div>
-					</div><br>
-					<b>Interpretation:</b>
-					<ol>
-						<li>Subway, McDonalds lead in terms of total violations. This can be explained in part due to higher store counts.</li>
-						<li>At Violations per store, KFC records 53 while McDonalds, Subway and others are far lower at 24, 21 respectively.</li>
-						<li>TacoBell and BurgerKing have lowest violations.</li>
-					</ol>
-					<p>If a brand has more stores than their competitors then it is likely to have more violations registered. Henceforth we also would like to know number of stores for which the inspections were carried out by City. In Los Angeles City, it appears that KFC is very bad situation. Burger King and TacoBell despite having higher stores than Wendys and Arbys register fewer violations.</p>
-				
-					<h4><b>Chicago, IL</h4></b>
-					<div class="row gtr-50 gtr-uniform">
-						<div class="col-9"><span class="image fit"><img src="images/analysis9.png"></span></div>
-					</div><br>
-					<p><b>Interpretation:</b> Rodents, Insects presence is the main code which is often cited. Protection of food, Sanitizing, Dish/Hand washing are among the top10.</p>
-				
-					<div class="row gtr-50 gtr-uniform">
-						<div class="col-7"><span class="image fit"><img src="images/analysis10.png"></span></div>
-					</div><br>
-					<p><b>Interpretation:</b> Subway, McDonalds once again fall short of required health standards. Total Violations are high due to presence of many stores. McDonalds, Burger King, KFC lead the fray in failing inspections.</p>
-				
-					<h4><b>Summary of Health Violation Data</h4></b>
-				
-					<ol>
-						<li>For both Chicago and Los Angeles cities, KFC and McDonalds are among the top 3 brands facing challenges in running their operations. They may already be incurring stiff penalities and repeated offences may cause them to lose their licenses.</li>
-						<li>McDonalds due to their larger presence in market, could have their troubles tied to other factors.</li>
-						<li>KFC despite having much fewer stores is unable to meet necessary guidelines and may be in real trouble.</li>
-					</ol>
-				
-					<h3><b>Review Sentiment of Brands on Yelp</h3></b>
-					<div class="row gtr-50 gtr-uniform">
-						<div class="col-9"><span class="image fit"><img src="images/analysis11.png"></span></div>
-					</div><br>
-					<p><b>Interpretation:</b> Going by shape of distributions, Brands like McDonalds, KFC and Wendys skew lower ratings than others. To have a better understanding lets look at proportion of ratings at Brand level.</p>
-
-					<div class="row gtr-50 gtr-uniform">
-						<div class="col-9"><span class="image fit"><img src="images/analysis12.png"></span></div>
-					</div><br>
-					<b>Interpretation:</b>
-						<ol>
-							<li>If we consider a rating of 3 (Orange) as Neutral and use it as benchmark to measure amount of positive and negative ratings, we realize that Burger King, KFC and McDonalds contain high amount of less favourable reviews.</li>
-							<li>Arbys is rated much better than all other brands.</li>
-						</ol>
-
-				</section>
-				
 				<!-- Seven -->
 				<section id="seven">
 					<h2>Recommendation</h2>
 					<ol>
-						<li>We recommend that if we want to perentrate in fast food market, <b>region of choice </b> could be a requirement to make considerable market and revenue. Assumed that one region could have a leverage than others like lower tax, alx legal requirements, etc.</li>
-						<li>Because there is stiff competition in the market, <b>consider innovate/differentiate lead products to leverage position compared to other competitors.</b>.</li>
-						<li>Number of violation and rating number highly correlates with number of stores that one brand have (i.e. McDonalds, BK), <b>it is best to expand the market in controlled and timely manner</b> to maintain customer sentiment towards brand.</li>
+						<li>Enhance Internet Program : For customers subscribing to internet-only packages, Consider apply an upscale package approach. For instance, if a customer subscribes to the 15Mbps package, we will provide them with the 20Mbps package for a predetermined period, which could be 3 months, 6 months, or 1 year.</li>
+						<li>Implement a retention call : Every 3 months, starting from the customer's subscription/contract initiation, and also when the customer is approaching the 1-year subscription mark or contract expiration. During the retention call, additional offers such as rewards or special promotions can be introduced.</li>
+						<li>Invest in Customer Education: Sometimes churn can occur due to misunderstanding or lack of awareness about certain features or benefits of the service. Consider investing in educational content, tutorials, or workshops to help customers make the most of their subscription and understand the value they are receiving.</li>
 					  </ol>
 				</section>
-
 				<!-- Eight -->
 				<section id="eight">
 					<h2>Dashboard</h2>
-					<div class='tableauPlaceholder' id='viz1651248016355' style='position: relative'><noscript><a href='#'><img alt='Dashboard 1 ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Re&#47;RestaurantinAmerica&#47;Dashboard1&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='RestaurantinAmerica&#47;Dashboard1' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Re&#47;RestaurantinAmerica&#47;Dashboard1&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='language' value='en-US' /><param name='filter' value='publish=yes' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1651248016355');                    var vizElement = divElement.getElementsByTagName('object')[0];                    if ( divElement.offsetWidth > 800 ) { vizElement.style.width='1920px';vizElement.style.height='1107px';} else if ( divElement.offsetWidth > 500 ) { vizElement.style.width='1920px';vizElement.style.height='1107px';} else { vizElement.style.width='100%';vizElement.style.height='4427px';}                     var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
+					<div class='tableauPlaceholder' id='viz1698844007704' style='position: relative'><noscript><a href='#'><img alt='Dashboard 1' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Ma&#47;May23_Seoul_Team5_GroupOFP&#47;Dashboard1&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='May23_Seoul_Team5_GroupOFP&#47;Dashboard1' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Ma&#47;May23_Seoul_Team5_GroupOFP&#47;Dashboard1&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='language' value='en-GB' /><param name='filter' value='publish=yes' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1698844007704');                    var vizElement = divElement.getElementsByTagName('object')[0];                    if ( divElement.offsetWidth > 800 ) { vizElement.style.width='1920px';vizElement.style.height='1107px';} else if ( divElement.offsetWidth > 500 ) { vizElement.style.width='1920px';vizElement.style.height='1107px'} else { vizElement.style.width='100%';vizElement.style.height='4427px';}                     var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
 				</section>
-			
-				<a href="https://adytiapp.github.io/adytia_uwak_portfolio/" class="button small">Home</a>
-				<a href="https://adytiapp.github.io/adytia_uwak_portfolio/projects.html" class="button small">Projects</a>
-			
+
+				<a href="https://bagusbasith02.github.io/portfolio/" class="button small">Home</a>
 			</div>
 
 		<!-- Footer -->
